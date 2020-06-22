@@ -5,23 +5,29 @@
   <title>Bootstrap Theme Company Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/segoe-fonts@1.0.1/segoe-fonts.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
     body * {
-      font: "Segoe UI";
+      font-family: "Segoe UI";
       line-height: 1.8;
-      color: #818181;
+      color: #000000;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 60px;
     }
 
     h2 {
       font-size: 24px;
       text-transform: uppercase;
-      color: #303030;
+      color: #000000;
       font-weight: 600;
       margin-bottom: 30px;
     }
@@ -45,7 +51,8 @@
     } */
     .navbar li a,
     .navbar .navbar-brand {
-      color: rgb(0, 68, 255) !important;
+      color: rgb(64, 68, 80) !important;
+
     }
 
     h4 {
@@ -54,6 +61,15 @@
       color: #303030;
       font-weight: 400;
       margin-bottom: 30px;
+    }
+
+    a {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 24px;
     }
 
     .container-fluid {
@@ -66,8 +82,81 @@
       padding: 40px 30px 30px;
     }
 
-    .container {}
+    /* slick */
+    .slick-center .slide-h3 {
+      color: #FFF;
+    }
+
+    .slider {
+      width: 600px;
+      height: 150px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .slide-h3 {
+      margin: 10% 0 10% 0;
+      padding: 40% 20%;
+      background: #008ed6;
+    }
+
+    .slider div {
+      margin-right: 5px;
+    }
+
+    .slick-slide {
+      opacity: .6;
+    }
+
+    .slick-center {
+      display: block;
+      max-width: 10% !important;
+      max-height: 20% !important;
+      opacity: 1;
+    }
+
+    .navbar-fixed-top.scrolled {
+      background-color: #fff !important;
+      transition: background-color 300ms linear;
+    }
   </style>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.slider').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 4,
+        speed: 1500,
+        index: 2,
+        focusOnSelect: true,
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }]
+      });
+    });
+
+    $(function () {
+      $(document).scroll(function () {
+        var $nav = $(".navbar-fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+      });
+    });
+  </script>
+
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -75,7 +164,8 @@
   background-size: 55%; 
   background-repeat: no-repeat;
   background-position: 100% 0">
-    <nav class="navbar navbar-fixed-top navbar-default" style="background: none;">
+    <!-- navbar -->
+    <nav class="navbar navbar-fixed-top navbar-default" style="background: none; padding-bottom: 30px;">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -83,74 +173,79 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#myPage"><img src="./images/Group 1.png" width="30" height="30"></a>
+          <a class="navbar-brand" href="#myPage"><img src="./images/Group 1.png" width="96" height="96"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right" style="padding-top: 40px;">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Service</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact" style="background-color: unset;">Contact</a></li>
-            <li><a style="padding-top: 10px;"><button type="button" class="btn btn-default"
-                  style="background: rgb(0, 0, 0); color: rgb(255, 255, 255);">LOG IN</button></a></li>
-
+            <li><button type="button" class="btn btn-default" style="background: rgb(0, 0, 0);">
+                <a style="padding-top: 10px;">LOG IN</a></button></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div id="home" class="container-fluid">
-      <div class="row" style="padding-top: 120px;">
+    <!-- WE ARE -->
+    <div id="home">
+      <div class="row" style="padding: 200px 0 80px 0;">
         <div class="container">
-          <div class="col-sm-6" style="padding-bottom: 20px;">
-            <h1 style="color: #303030; text-align: left;">WE ARE<br>Y.I.M Corporation</h1>
-            <p style="color: #303030; text-align: left;">Y.I.M Corporation Co.,Ltd. Doing business in software and
+          <div class="col-sm-6">
+            <h1 style="text-align: left;">WE ARE<br>Y.I.M Corporation</h1>
+            <p style=" text-align: left;
+            padding-bottom: 50px;
+            font-size: 20px; font-weight: 600;">Y.I.M Corporation Co.,Ltd. Doing business in software and
               hardware development in response to the changes in the digital age 4.0</p>
             <button class="btn btn-default btn-lg" style="
           background: rgb(0, 0, 0); 
-          color: rgb(255, 255, 255);">
+          color: rgb(255, 255, 255);
+          font-size: 29px; font-weight: 600;">
               QR CORD AR</button>
           </div>
           <div class="col-sm-6 header-right-image">
             <img src="images/Group 100.png" style="max-width: 100%;
           max-height: 100%;
-          display: block; ">
+          display: block;
+          padding: 80px 0px 80px;">
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div style="background-color: #f8f9fa!important;">
-    <div id="about" class="container-fluid" style="padding-top: 120px;padding-bottom: 120px;">
+  <!-- Overall in Y.I.M Corporation -->
+  <div style="background-color: #eff1f3!important;">
+    <div id="about" class="container-fluid" style="padding-top: 50px;padding-bottom: 50px;">
       <div class="row">
         <div class="container">
           <div class="col-sm-12" style="text-align: center;">
             <h1 style="margin-bottom: 0px;
-        margin-top: 0px;
-        color: black;">Overall in Y.I.M Corporation</h1><br>
-            <h4>solutions with the best. Incididunt dolor sit amet, adipiscing elitsed
-              tempor vel metus scelerisque ante sollicitudin.</h4><br>
+        margin-top: 0px;">Overall in Y.I.M Corporation</h1><br>
+            <p style="font-size: 22px;">solutions with the best. Incididunt dolor sit amet, adipiscing elitsed
+              tempor vel metus scelerisque ante sollicitudin.</p><br>
             <div class="row">
               <div class="col-sm-12 col-sm-4">
                 <div class="item-about">
-
-                  <h4>Enterprise</h4>
+                  <p>img</p>
+                  <p style="font-weight: bold;">Enterprise</p>
                   <p>Create systems for organizations and connect internal systems CRM, CMS, Payment,
                     Accounting, Data, etc</p>
                 </div>
               </div>
               <div class="col-sm-12 col-sm-4">
                 <div class="item-about">
-
-                  <h4>Academy</h4>
+                  <p>img</p>
+                  <p style="font-weight: bold;">Academy</p>
                   <p>Create and develop a group of technological talents nationwide (Software, Hardware,
                     UX/UI, IoT etc.)</p>
                 </div>
               </div>
               <div class="col-sm-12 col-sm-4">
                 <div class="item-about">
-                  <h4>Digital Transformation</h4>
+                  <p>img</p>
+                  <p style="font-weight: bold;">Tailor Made</p>
                   <p>Helps to solve problems for entrepreneurs and upgrade business in technology and
                     innovation.</p>
                 </div>
@@ -159,10 +254,183 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
+  <!-- Innovation and Technology -->
+  <div id="about" class="container-fluid" style="padding-top: 50px;padding-bottom: 50px;">
+    <div class="container">
+      <h1>Innovation and Technology</h1>
+      <div class="row" style="padding: 30px;">
+        <div class="col-sm-6">
+          <div class="col-sm-3">img</div>
+          <div class="col-sm-8">
+            <h1 style="font-size: 31px;">Smart City</h1>
+            <p style="font-size: 24px;">Creating innovations for city building using IOT to connect data.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="col-sm-3">img</div>
+          <div class="col-sm-8">
+            <h1 style="font-size: 31px;">Web & App</h1>
+            <p style="font-size: 24px;">Create websites and applications to meet the needs of customers.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="col-sm-3">img</div>
+          <div class="col-sm-8">
+            <h1 style="font-size: 31px;">Data Center</h1>
+            <p style="font-size: 24px;">The center of small and large data to meet the needs and privacy of business
+              data.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="col-sm-3">img</div>
+          <div class="col-sm-8">
+            <h1 style="font-size: 31px;">Blockchain</h1>
+            <p style="font-size: 24px;">The best and safest database for customer data and digital currency creation
+              for future exchanges.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="col-sm-3">img</div>
+          <div class="col-sm-8">
+            <h1 style="font-size: 31px;">Circuit</h1>
+            <p style="font-size: 24px;">Circuit design in the industry to create new innovations.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="col-sm-3">img</div>
+          <div class="col-sm-8">
+            <h1 style="font-size: 31px;">AI</h1>
+            <p style="font-size: 24px;">Using artificial intelligence in creating innovation and reducing business
+              operating costs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Service -->
+  <div style="background-color: #eff1f3!important;">
+    <div id="about" class="container-fluid" style="padding-top: 50px;padding-bottom: 50px;">
+      <div class="row">
+        <div class="container">
+          <div style="display: flex; justify-content: space-between;">
+            <p style="font-size: 31px; padding-top: 50px;">Website Application AI Outher</p>
+            <h1>Our Service</h1>
+          </div>
+          <div class="slider">
+            <div>
+              <div class="slide-h3">
+                <h3>
+                  1
+                </h3>
+              </div>
+            </div>
+            <div>
+              <div class="slide-h3">
+                <h3>
+                  2
+                </h3>
+              </div>
+            </div>
+            <div>
+              <div class="slide-h3">
+                <h3>
+                  3
+                </h3>
+              </div>
+            </div>
+            <div>
+              <div class="slide-h3">
+                <h3>
+                  4
+                </h3>
+              </div>
+            </div>
+            <div>
+              <div class="slide-h3">
+                <h3>
+                  5
+                </h3>
+              </div>
+            </div>
+            <div>
+              <div class="slide-h3">
+                <h3>
+                  6
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OUR CLIENTS -->
+  <div id="about" class="container-fluid" style="padding-top: 50px;padding-bottom: 50px;">
+    <div class="row">
+      <div class="container">
+        <div style="text-align: center;">
+          <h1>OUR CLIENTS</h1>
+        </div>
+        <div class="slider">
+          <div>
+            <div class="slide-h3">
+              <h3>
+                1
+              </h3>
+            </div>
+          </div>
+          <div>
+            <div class="slide-h3">
+              <h3>
+                2
+              </h3>
+            </div>
+          </div>
+          <div>
+            <div class="slide-h3">
+              <h3>
+                3
+              </h3>
+            </div>
+          </div>
+          <div>
+            <div class="slide-h3">
+              <h3>
+                4
+              </h3>
+            </div>
+          </div>
+          <div>
+            <div class="slide-h3">
+              <h3>
+                5
+              </h3>
+            </div>
+          </div>
+          <div>
+            <div class="slide-h3">
+              <h3>
+                6
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contack Us -->
   <div id="contact" class="container-fluid bg-grey">
     <div class="container">
       <div style="    
@@ -193,8 +461,11 @@
         </div>
       </div>
     </div>
-
   </div>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>
