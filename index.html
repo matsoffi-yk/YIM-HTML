@@ -149,6 +149,24 @@
     .slick-list {
       overflow-y: visible;
     }
+
+    .slider {
+      width: 78%;
+      margin: 20px auto;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+    
+    .slide {
+      padding: 30px 10px 0 10px;
+
+    }
+
+    .slider .slick-center img{
+      opacity: 1;
+      width: 250px;
+    }
   </style>
   <script type="text/javascript">
     $(document).ready(function () {
@@ -161,7 +179,20 @@
         speed: 500,
         variableWidth: true,
         variableHeight: true,
+        focusOnSelect: true,
         dots: true,
+      });
+
+      $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        variableWidth: true,
+        variableHeight: true,
+        focusOnSelect: true,
       });
     });
 
@@ -338,7 +369,7 @@
         <h1>Our Service</h1>
       </div>
       <div class="container-slick">
-        <div class="slider center">
+        <div class="center">
           <div class="clip">
             <div class="card">
               <img class="card-img-top img" src="./images/Mask Group 41.png" alt="Card image cap">
@@ -390,85 +421,65 @@
   </div>
 
   <!-- OUR CLIENTS -->
-  <div id="about" class="container-fluid" style="padding-top: 50px;padding-bottom: 50px;">
-    <div class="row">
-      <div class="container">
-        <div style="text-align: center;">
-          <h1>OUR CLIENTS</h1>
-        </div>
-        <div class="slider">
-          <div>
-            <div class="slide-h3">
-              <h3>
-                1
-              </h3>
-            </div>
+  <div style="background: url('./images/Rectangle 31.png'); margin-top: 100px;">
+    <div id="about" class="container-fluid" style="padding-top: 50px;padding-bottom: 50px;">
+      <div class="row">
+        <div class="container">
+          <div style="text-align: center; padding-top: 50px;">
+            <h1 style="color: white;">OUR CLIENTS</h1>
           </div>
-          <div>
-            <div class="slide-h3">
-              <h3>
-                2
-              </h3>
+          <div class="slider">
+            <div class="slide">
+              <img class="img" src="./images/repeat-grid-1.png" alt="" class="img-responsive" />
+              <h1>slide 1</h1>
             </div>
-          </div>
-          <div>
-            <div class="slide-h3">
-              <h3>
-                3
-              </h3>
+            <div class="slide">
+              <img class="img" src="./images/Mask Group 18.png" alt="" class="img-responsive" />
+              <h1>slide 2</h1>
             </div>
-          </div>
-          <div>
-            <div class="slide-h3">
-              <h3>
-                4
-              </h3>
+            <div class="slide">
+              <img class="img" src="./images/Mask Group 30.png" alt="" class="img-responsive" />
+              <h1>slide 3</h1>
             </div>
-          </div>
-          <div>
-            <div class="slide-h3">
-              <h3>
-                5
-              </h3>
+            <div class="slide">
+              <img class="img" src="./images/Mask Group 31.png" alt="" class="img-responsive" />
+              <h1>slide 4</h1>
             </div>
-          </div>
-          <div>
-            <div class="slide-h3">
-              <h3>
-                6
-              </h3>
+            <div class="slide">
+              <img class="img" src="./images/Mask Group 19.png" alt="" class="img-responsive" />
+              <h1>slide 5</h1>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Contack Us -->
-  <div id="contact" class="container-fluid bg-grey">
-    <div class="container">
-      <div style="    
+    <!-- Contack Us -->
+    <div id="contact" class="container-fluid bg-grey">
+      <div class="container">
+        <div style="    
     padding: 50px;
     border-radius: 5px;
     background-color: #f8f9fa!important;">
-        <h2 class="text-center">Contack Us</h2>
-        <div class="row">
-          <div class="col-sm-12 slideanim">
-            <div class="row">
-              <div class="col-sm-6 form-group">
-                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          <h2 class="text-center">Contack Us</h2>
+          <div class="row">
+            <div class="col-sm-12 slideanim">
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                  <input class="form-control" id="lastname" name="lastname" placeholder="lastname" type="lastname"
+                    required>
+                </div>
               </div>
-              <div class="col-sm-6 form-group">
-                <input class="form-control" id="lastname" name="lastname" placeholder="lastname" type="lastname"
-                  required>
-              </div>
-            </div>
-            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required><br>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Messanger"
-              rows="5"></textarea><br>
-            <div class="row">
-              <div class="col-sm-12 form-group">
-                <button class="btn btn-default" type="submit">Send</button>
+              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required><br>
+              <textarea class="form-control" id="comments" name="comments" placeholder="Messanger"
+                rows="5"></textarea><br>
+              <div class="row">
+                <div class="col-sm-12 form-group">
+                  <button class="btn btn-default" type="submit">Send</button>
+                </div>
               </div>
             </div>
           </div>
