@@ -18,135 +18,86 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css" />
 </head>
 <style>
-    html,
-    body {
-        padding: 0;
-        margin: 0;
+    svg:hover path {
+        fill: rgb(132, 0, 255);
+        transition: all ease 0.3s;
     }
 
-    .container {
-        position: relative;
-        margin: 0 auto;
-        width: 60%;
-        padding-top: 100px;
-
+    svg path {
+        transition: all ease 0.3s;
     }
 
-    .card {
-        background: #fff;
-        color: #ffffff;
-        margin: 10px;
-        padding: 2%;
-        position: relative;
-        background-color: black;
+    .color-u {
+        fill: #DF1E34;
     }
 
 
-    .clip {
-        overflow: hidden;
-        bottom: 0;
-    }
-
-    .center .slick-center .card {
-        opacity: 1;
-        transform: scale(1.3);
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-    }
-
-    .center .card {
-        opacity: 0.8;
-        bottom: 0;
-    }
-
-    .slick-slide {
-        height: auto;
+    .logo {
+        background-color: red;
+        -webkit-mask: url("images/ai.svg") no-repeat center;
+        mask: url("images/ai.svg") no-repeat center;
     }
 </style>
 
 <body>
     <div class="container">
-        <div class="slider center">
-            <div class="clip">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="./images/Mask Group 41.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="clip">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="./images/Mask Group 41.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="clip">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="./images/Mask Group 41.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="clip">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="./images/Mask Group 41.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="clip">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="./images/Mask Group 41.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="clip">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="./images/Mask Group 41.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="97.000000pt" height="56.000000pt"
+            viewBox="0 0 97.000000 56.000000" preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,56.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                <path class="color-u" d="M225 486 c-157 -51 -221 -76 -223 -88 -4 -21 5 -26 128 -68 l105 -35
+5 -70 c5 -65 7 -71 39 -92 46 -31 94 -43 177 -43 85 0 161 21 197 54 24 22 27
+33 27 89 l0 65 84 26 c46 14 87 26 90 26 3 0 6 -34 6 -76 0 -65 -3 -78 -21
+-93 -15 -12 -22 -32 -26 -77 -8 -87 4 -104 70 -104 29 0 58 5 65 12 7 7 12 39
+12 74 0 52 -4 67 -25 92 -22 26 -25 39 -27 133 l-3 104 -220 72 c-121 40 -224
+72 -230 72 -5 0 -109 -33 -230 -73z m405 -40 l165 -53 -170 -55 -170 -54 -160
+53 c-88 29 -162 53 -165 54 -7 1 313 108 325 109 6 0 84 -24 175 -54z m-204
+-208 c35 -10 50 -8 116 15 42 14 79 23 82 19 3 -3 6 -22 6 -43 0 -35 -4 -41
+-42 -61 -59 -31 -194 -32 -253 -3 -37 19 -40 23 -43 67 l-3 47 48 -15 c26 -8
+66 -20 89 -26z m484 -144 c0 -27 -4 -34 -20 -34 -17 0 -20 7 -20 38 0 21 3 42
+7 45 13 13 33 -16 33 -49z" />
+            </g>
+        </svg>
+
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="83.000000pt" height="63.000000pt"
+            viewBox="0 0 83.000000 63.000000" preserveAspectRatio="xMidYMid meet">
+
+            <g transform="translate(0.000000,63.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                <path class="color-u" d="M180 620 c-49 -14 -88 -40 -123 -80 -93 -109 -66 -278 57 -355 48
+-29 54 -30 215 -38 209 -9 302 -22 319 -44 14 -20 15 -23 2 -43 -7 -11 -37
+-16 -122 -20 -147 -7 -145 -24 3 -28 104 -2 114 -1 135 19 30 28 31 72 3 100
+-11 11 -19 21 -17 22 112 56 136 79 163 156 40 114 -10 236 -119 294 -38 20
+-55 22 -266 23 -124 1 -236 -1 -250 -6z m140 -45 c11 -13 6 -15 -31 -15 -97 0
+-184 -50 -226 -129 -21 -41 -23 -42 -23 -17 0 57 50 126 115 160 40 21 148 21
+165 1z m183 -20 c12 -38 12 -288 0 -335 l-9 -35 -68 -3 -67 -3 8 48 c10 61 10
+264 0 321 l-7 43 67 -3 c64 -3 67 -4 76 -33z m177 15 c36 -19 40 -24 40 -60 0
+-39 -17 -90 -31 -90 -4 0 -9 11 -13 23 -9 39 -46 77 -94 100 -66 32 -66 47 3
+47 36 0 70 -7 95 -20z m-340 -66 c0 -9 -12 -14 -37 -14 -97 -2 -193 -73 -224
+-166 -7 -24 -8 -21 -5 20 7 85 79 161 165 176 52 8 101 0 101 -16z m254 -5
+c43 -34 71 -106 53 -136 -13 -21 -25 -15 -32 17 -4 16 -20 41 -36 54 -20 17
+-29 34 -29 55 0 36 8 38 44 10z m157 -101 c-23 -74 -113 -147 -183 -148 -42 0
+-25 33 24 48 23 7 55 23 71 34 34 24 86 103 88 132 1 17 3 16 6 -4 3 -13 0
+-41 -6 -62z m-413 5 l3 -53 -33 7 c-69 13 -115 50 -90 75 12 12 69 27 97 25
+17 -2 20 -10 23 -54z m245 -41 c5 -24 -6 -41 -25 -42 -5 0 -8 21 -8 46 0 39 2
+44 14 35 8 -6 16 -24 19 -39z m-393 18 c14 -25 57 -48 109 -56 39 -6 41 -8 41
+-42 l0 -35 -41 7 c-55 9 -90 28 -128 71 -25 29 -29 39 -21 55 14 25 26 25 40
+0z m576 -95 c-38 -64 -107 -105 -177 -105 -67 0 -79 25 -16 35 23 4 60 15 82
+24 46 21 111 88 122 128 l8 28 3 -33 c2 -22 -5 -48 -22 -77z m-601 -3 c42 -37
+100 -62 144 -62 29 0 26 -18 -5 -30 -34 -13 -78 -13 -125 2 -59 17 -76 38 -71
+86 2 23 6 42 9 42 3 0 24 -17 48 -38z" />
+            </g>
+        </svg>
+
+        Original:
+        <div class="logo"></div>
+
+        
     </div>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 <script>
-    $('.center').slick({
-        centerMode: true,
-        infinite: true,
-        centerPadding: '55px',
-        slidesToShow: 3,
-        speed: 500,
-        variableWidth: false,
-    });
-    $('.center').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        console.log('beforeChange', currentSlide, nextSlide);
-    });
-    $('.center').on('afterChange', function (event, slick, currentSlide) {
-        console.log('afterChange', currentSlide);
-    });
+
 </script>
 
 </html>
